@@ -1,4 +1,4 @@
-#KaliHarden By Taylor Christian Newsome
+# KaliHarden By Taylor Christian Newsome
 
 # Advanced Hardening Additions
 
