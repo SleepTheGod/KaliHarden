@@ -34,7 +34,8 @@ cd KaliHarden
 chmod +x main.sh
 chmod +x fix.sh
 chmod +x install.sh
-sudo bash main.sh; sudo bash fix.sh; sudo bash install.sh;
+chmod +x iptables.sh
+sudo bash main.sh; sudo bash fix.sh; sudo bash install.sh; sudo bash iptables.sh;
 ```
 
 Run it with the desired options, for example
