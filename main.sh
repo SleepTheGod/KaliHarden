@@ -3,6 +3,109 @@
 # Advanced Security and Network Hardening Script for Kali Linux by Taylor Newsome
 # Including kernel, network, access, monitoring, and advanced intrusion detection
 
+# Harden Command - Usage: harden [options]
+# Options:
+#   -h, --help      Show help options
+#   -k, --kernel    Apply kernel-level hardening
+#   -n, --network   Apply network-level hardening
+#   -a, --access    Apply user & access control hardening
+#   -m, --monitor   Apply monitoring & intrusion detection
+#   -s, --ssh       Apply SSH hardening
+#   -f, --final     Finalize hardening (disable services, cleanup)
+
+# Function to show help message
+show_help() {
+    echo "Usage: harden [options]"
+    echo ""
+    echo "Options:"
+    echo "  -h, --help      Show this help message"
+    echo "  -k, --kernel    Apply kernel-level hardening"
+    echo "  -n, --network   Apply network-level hardening"
+    echo "  -a, --access    Apply user & access control hardening"
+    echo "  -m, --monitor   Apply monitoring & intrusion detection"
+    echo "  -s, --ssh       Apply SSH hardening"
+    echo "  -f, --final     Finalize hardening (disable services, cleanup)"
+}
+
+# Function for kernel-level hardening
+harden_kernel() {
+    echo "Applying kernel-level hardening..."
+    # Kernel hardening commands go here (similar to the original script)
+}
+
+# Function for network hardening
+harden_network() {
+    echo "Applying network hardening..."
+    # Network hardening commands go here (similar to the original script)
+}
+
+# Function for user & access control hardening
+harden_access() {
+    echo "Applying user & access control hardening..."
+    # Access control hardening commands go here (similar to the original script)
+}
+
+# Function for monitoring & intrusion detection
+harden_monitoring() {
+    echo "Applying monitoring & intrusion detection..."
+    # Monitoring and intrusion detection commands go here (similar to the original script)
+}
+
+# Function for SSH hardening
+harden_ssh() {
+    echo "Applying SSH hardening..."
+    # SSH hardening commands go here (similar to the original script)
+}
+
+# Function to finalize hardening
+harden_finalize() {
+    echo "Finalizing hardening..."
+    # Finalization commands (disable services, cleanup) go here
+}
+
+# Parse command-line options
+case "$1" in
+    -h|--help)
+        show_help
+        ;;
+    -k|--kernel)
+        harden_kernel
+        ;;
+    -n|--network)
+        harden_network
+        ;;
+    -a|--access)
+        harden_access
+        ;;
+    -m|--monitor)
+        harden_monitoring
+        ;;
+    -s|--ssh)
+        harden_ssh
+        ;;
+    -f|--final)
+        harden_finalize
+        ;;
+    *)
+        echo "Invalid option: $1"
+        show_help
+        ;;
+esac
+
+# Installation script for "harden" command
+
+# Ensure main.sh is executable
+chmod +x KaliHarden/main.sh
+
+# Move the script to /usr/local/bin as "harden"
+sudo cp KaliHarden/main.sh /usr/local/bin/harden
+
+# Ensure it's executable in the new location
+sudo chmod +x /usr/local/bin/harden
+
+# Inform the user that the installation is complete
+echo "Installation complete! You can now use the 'harden' command."
+
 # Ensure system is up-to-date
 sudo apt-get update && sudo apt-get upgrade -y
 
